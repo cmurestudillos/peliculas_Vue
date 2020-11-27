@@ -6,3 +6,7 @@ coverage
 
 # Editor directories and files
 .svn
+
+# Configuracion
+url.js
+key.js

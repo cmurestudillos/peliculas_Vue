@@ -1,0 +1,74 @@
+/* Estilos de la web */
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+
+#header {
+    height: 120px;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    border-top: 5px solid #09a330;
+}
+
+#header ul li a:hover {
+    border-top: 5px solid #09a330;
+}
+
+.active {
+    border-top: 5px solid #09a330;
+    color: #09a330 !important;
+}
+
+.center {
+    width: 75%;
+    margin: 0px auto;
+}
+
+.left {
+    float: left;
+    margin-left: 10px;
+}
+
+.right {
+    float: right;
+    margin-right: 10px;  
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+#footer {
+    background: rgba(98, 125, 77, 1);
+    background: -moz-linear-gradient(left, rgba(98, 125, 77, 1) 0%, rgba(9, 163, 48, 1) 0%, rgba(9, 163, 48, 0.8) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(98, 125, 77, 1)), color-stop(0%, rgba(9, 163, 48, 1)), color-stop(100%, rgba(9, 163, 48, 0.8)));
+    background: -webkit-linear-gradient(left, rgba(98, 125, 77, 1) 0%, rgba(9, 163, 48, 1) 0%, rgba(9, 163, 48, 0.8) 100%);
+    background: -o-linear-gradient(left, rgba(98, 125, 77, 1) 0%, rgba(9, 163, 48, 1) 0%, rgba(9, 163, 48, 0.8) 100%);
+    background: -ms-linear-gradient(left, rgba(98, 125, 77, 1) 0%, rgba(9, 163, 48, 1) 0%, rgba(9, 163, 48, 0.8) 100%);
+    background: linear-gradient(to right, rgba(98, 125, 77, 1) 0%, rgba(9, 163, 48, 1) 0%, rgba(9, 163, 48, 0.8) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#09a330', GradientType=1);
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #444;
+}
+
+#footer p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sub-header-error {
+    font-size: 38px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px solid #eee;
+}

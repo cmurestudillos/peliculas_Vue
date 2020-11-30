@@ -1,23 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { PeliculasService } from 'src/app/services/peliculas.service';
+<template>
+    <p>Home Componewnt</p>  
+</template>
 
-@Component({
-  selector: 'app-home',
-  templateUrl: '../../views/home.component.html'
-})
-export class HomeComponent implements OnInit {
+<script>
 
-  cartelera: any;
-  populares: any;
-  peliskids: any;
-
-  constructor( public _peliSrv: PeliculasService ) {
-    this._peliSrv.getPopulares().subscribe( data => {
-      this.populares = data;
-    });
-  }
-
-  ngOnInit() {
-  }
-
+export default {
+  name: 'HomeComponent',
 }
+</script>

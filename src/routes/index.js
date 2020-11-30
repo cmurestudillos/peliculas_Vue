@@ -13,7 +13,7 @@ import ErrorComponent from '../components/shared/error/ErrorComponent.vue';
 Vue.use(VueRouter);
 
 const routes = [
-    {path: '/', redirect: '/home'},
+    {path: '/', component: HomeComponent},
     {path: '/home', component: HomeComponent},
     {path: 'buscar', component: BuscarComponent},
     {path: 'buscar/:texto', component: BuscarComponent},

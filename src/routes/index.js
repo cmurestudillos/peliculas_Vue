@@ -15,7 +15,7 @@ Vue.use(VueRouter);
 const routes = [
     {path: '/', component: HomeComponent},
     {path: '/home', component: HomeComponent},
-    {path: 'buscar', component: BuscarComponent},
+    {path: '/buscar', component: BuscarComponent},
     {path: 'buscar/:texto', component: BuscarComponent},
     {path: 'pelicula/:id/:pag', component: PeliculaComponent},
     {path: 'pelicula/:id/:pag/:busqueda', component: PeliculaComponent},

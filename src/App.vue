@@ -2,7 +2,7 @@
   <div id="app">
     <NavbarComponent></NavbarComponent>
 
-    <router-view></router-view>
+    <router-view class="container mt-2"></router-view>
 
     <!-- Limpiar los float -->
     <div class="clearfix"></div>

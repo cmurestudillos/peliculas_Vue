@@ -4,6 +4,10 @@
     background-image: linear-gradient(15deg, #09a330 0%, #a0d080 100%);
 }
 
+.puntero{
+    cursor: pointer;
+}
+
 .center {
     width: 75%;
     margin: 0px auto;
@@ -43,6 +47,33 @@ a:hover {
     box-shadow: 5px 10px 8px #888888;
 }
 
+.div-pic-1{
+    width: 100%;
+    height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.pic-titulo{
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.div-pic-2{
+    width: 100%;
+    height: 200px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 footer {
     background: rgba(98, 125, 77, 1);
     background: -moz-linear-gradient(left, rgba(98, 125, 77, 1) 0%, rgba(9, 163, 48, 1) 0%, rgba(9, 163, 48, 0.8) 100%);
@@ -67,4 +98,33 @@ footer p {
     font-size: 38px;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px solid #eee;
+}
+
+/* Animaciones */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+  
+.fast {
+-webkit-animation-duration: 0.3s;
+animation-duration: 0.3s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+}
+
+to {
+    opacity: 1;
+}
+}
+  
+.fadeIn {
+animation-name: fadeIn;
 }

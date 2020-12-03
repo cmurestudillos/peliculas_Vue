@@ -2,13 +2,17 @@
   <div>
     <h1>Peliculas Populares</h1>
     <hr>    
-    <div class="col-sm-6">
-      <div class="row">
-        <div class="col-md-12" :style="{ 'background-image': 'url( ' + (peliculas[0].backdrop_path) + ' )' }">
-            <p>{{ peliculas[0].original_title }}</p>
+
+    <div class="row animated fadeIn slow" v-if="peliculas">
+      <div class="col-sm-6" v-for="pelicula in peliculas" :key="pelicula.id">
+        <div class="row">
+          <div class="col-md-12 div-pic-1 puntero" :style="{ 'background-image': 'url( ' + (pelicula.poster_path) + ' )' }">
+              <p class="pic-titulo">{{ pelicula.original_title }}</p>
+          </div>
         </div>
-      </div>
-    </div>    
+      </div>       
+    </div>     
+   
   </div>
 </template>
 
@@ -29,6 +33,9 @@ export default {
         api: global.urlApi,
         key: global.urlKey,
         peliculas: [],
+        poster: '',
+        backdrop: '',
+        urlImagen: "http://image.tmdb.org/t/p/w500"
       }
   },
   methods: {
@@ -41,11 +48,35 @@ export default {
       axios.get(this.api + '/discover/movie?sort_by=popularity.desc&api_key=' + this.key + '&language=es-ES&region=ES')
           .then( res => {
               if(res.data){
-                this.peliculas = res.data.results;  
-                console.log(this.peliculas)              
+                this.peliculas = res.data.results; 
+                //console.log(this.peliculas) 
+              }
+              for (let index = 0; index < this.peliculas.length; index++) {
+                this.poster = this.urlImagen + this.peliculas[index].poster_path;
+                this.peliculas[index].poster_path = this.poster;
+                this.backdrop = this.urlImagen + this.peliculas[index].backdrop;
+                this.peliculas[index].backdrop = this.backdrop;
               }
           });
       }
-  }   
+  },
+  peliculaImagen(pelicula,poster){
+
+    let url = "http://image.tmdb.org/t/p/w500";
+
+    if( poster ){
+      return url + pelicula.poster_path;
+    }
+
+    if( pelicula.backdrop_path ){
+      return url + pelicula.backdrop_path;
+    }else{
+      if( pelicula.poster_path ){
+        return url + pelicula.poster_path;
+      }else{
+        return "assets/img/no_image.png";
+      }
+    }
+  }     
 }
 </script>

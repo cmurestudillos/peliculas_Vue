@@ -17,7 +17,7 @@ const routes = [
     {path: '/home', component: HomeComponent},
     {path: '/buscar', component: BuscarComponent},
     {path: 'buscar/:texto', component: BuscarComponent},
-    {path: 'pelicula/:id/:pag', component: PeliculaComponent},
+    {path: 'pelicula/:id/:pag', name: 'pelicula', component: PeliculaComponent},
     {path: 'pelicula/:id/:pag/:busqueda', component: PeliculaComponent},
     {path: '*', component: ErrorComponent }
 ];

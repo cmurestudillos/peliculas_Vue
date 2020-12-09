@@ -52,6 +52,28 @@ a:hover {
     box-shadow: 5px 10px 8px #888888;
 }
 
+.btn {
+    flex: 1 1 auto;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    border: 1px solid #09a330 !important;
+}
+
+.btn-4 {
+    background-image: linear-gradient(to right, #a0d080 0%, #c9fbc2 51%, #09a330 100%);
+}
+
+.btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+}
+
 .div-pic-1{
     width: 100%;
     height: 300px;

@@ -47,11 +47,6 @@ a:hover {
     color: white !important;
 }
 
-.btn-buscar{
-    padding: 10px;
-    box-shadow: 5px 10px 8px #888888;
-}
-
 .btn {
     flex: 1 1 auto;
     padding: 30px;

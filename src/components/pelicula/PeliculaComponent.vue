@@ -46,7 +46,7 @@ export default {
      
       // Recogemos el parametro busqueda para saber si venimos de buscar
       if(this.$route.params.busqueda !== ''){
-        this.pagbusquedaina = this.$route.params.busqueda; 
+        this.busqueda = this.$route.params.busqueda; 
       }
 
       // Llamamos al metodo

@@ -45,10 +45,6 @@ export default {
 
       console.log(stringBusqueda)
 
-      if(stringBusqueda === ''){
-        return;
-      }
-
       this.$router.push('/buscar/' + stringBusqueda);
 
     }

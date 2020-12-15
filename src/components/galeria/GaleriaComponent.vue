@@ -29,22 +29,16 @@
 
       <div class="col-sm-6">
         <div class="row">
-          <div class="col-sm-6 div-pic-2" :style="{ 'background-image': 'url( ' + (peliculas[3].poster_path) + ' )'  }">
+          <div class="col-sm-12 div-pic-2" :style="{ 'background-image': 'url( ' + (peliculas[3].poster_path) + ' )'  }">
             <router-link :to="{name:'pelicula', params: {id: peliculas[3].id, pag: 'home'} }">
               <p class="pic-titulo puntero">{{ peliculas[3].original_title }}</p>
             </router-link>
           </div>
-          <div class="col-sm-6 div-pic-2" :style="{ 'background-image': 'url( ' + (peliculas[4].poster_path) + '  )'  }">
-            <router-link :to="{name:'pelicula', params: {id: peliculas[4].id, pag: 'home'} }">
-                <p class="pic-titulo puntero">{{ peliculas[4].original_title }}</p>
-            </router-link>
-          </div>
         </div>
-
         <div class="row">
-          <div class="col-md-12 div-pic-1" :style="{ 'background-image': 'url( ' + (peliculas[5].poster_path) + '  )'  }">
-            <router-link :to="{name:'pelicula', params: {id: peliculas[5].id, pag: 'home'} }">
-              <p class="pic-titulo puntero">{{ peliculas[5].original_title }}</p>
+          <div class="col-md-12 div-pic-1" :style="{ 'background-image': 'url( ' + (peliculas[4].poster_path) + '  )'  }">
+            <router-link :to="{name:'pelicula', params: {id: peliculas[4].id, pag: 'home'} }">
+              <p class="pic-titulo puntero">{{ peliculas[4].original_title }}</p>
             </router-link>
           </div>
         </div>
@@ -83,32 +77,21 @@ export default {
       console.log('GaleriaComponent.vue - Metodo getPeliculasPopulares');
 
       axios.get(this.api + '/discover/movie?sort_by=popularity.desc&api_key=' + this.key + '&language=es-ES&region=ES')
-          .then( res => {
-              if(res.data){
-                this.peliculas = res.data.results; 
-                //console.log(this.peliculas) 
-              }
-              for (let index = 0; index < 6; index++) {
-
-                this.poster = this.urlImagen + this.peliculas[index].poster_path;
-                this.backdrop = this.urlImagen + this.peliculas[index].backdrop_path;
-
-                if( this.poster ){
-                  this.peliculas[index].poster_path = this.poster;
+        .then( res => {
+            if(res.data){
+              this.peliculas = res.data.results; 
+              //console.log(this.peliculas) 
+            }
+            for (const key in this.peliculas) {
+              if (Object.hasOwnProperty.call(this.peliculas, key)) {
+                if(this.peliculas[key].poster_path === null){
+                  this.peliculas[key].poster_path = '';
                 }else{
-                  if( this.backdrop ){
-                    this.peliculas[index].backdrop_path = this.backdrop;
-                  }else{
-                    if( this.poster ){
-                      this.peliculas[index].poster_path = this.poster;
-                    }else{
-                      this.peliculas[index].poster_path = "assets/img/no_image.png";
-                      this.peliculas[index].backdrop_path = "assets/img/no_image.png";
-                    }
-                  }
+                  this.peliculas[key].poster_path = this.urlImagen + this.peliculas[key].poster_path;
                 }
               }
-          });
+            }
+        });
       }
   }
 }

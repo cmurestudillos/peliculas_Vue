@@ -3,7 +3,7 @@
     <h1>Peliculas Populares</h1>
     <hr>    
 
-    <div class="row animated fadeIn slow" v-if="peliculas">
+    <div class="row animated fadeIn slow" v-if="peliculas.length > 0">
       <div class="col-sm-6">
         <div class="row">
             <div class="col-md-12 div-pic-1" :style="{ 'background-image': 'url( ' + (peliculas[0].poster_path) + ' )' }">

@@ -50,10 +50,10 @@ export default {
     // Recogemos el parametro id de la pelicula seleccionada
     if(this.$route.params.texto !== '' && this.$route.params.texto !== undefined){
       this.buscador = this.$route.params.texto;
+        
+      // Llamamos al metodo
+      this.buscarPelicula();
     }
-
-    // Llamamos al metodo
-    this.buscarPelicula();
   },
   data(){
       return {

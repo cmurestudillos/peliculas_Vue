@@ -97,7 +97,7 @@ export default {
             if(this.$route.params.pag === 'buscar'){
               this.$route.params.texto = this.$route.params.busqueda;
               this.busqueda = this.$route.params.texto;
-              this.$router.push({path: '/buscar/' + this.busqueda});
+              this.$router.push('/buscar/' + this.busqueda);
             }
           }
       }       

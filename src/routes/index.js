@@ -2,7 +2,7 @@ import Vue from 'vue';
 // Rutas
 import VueRouter from 'vue-router';
 // Componentes
-import HomeComponent from '../components/home/Homecomponent.vue';
+import HomeComponent from '../components/home/HomeComponent.vue';
 import BuscarComponent from '../components/buscar/BuscarComponent.vue';
 import PeliculaComponent from '../components/pelicula/PeliculaComponent.vue';
 import ErrorComponent from '../components/shared/error/ErrorComponent.vue';

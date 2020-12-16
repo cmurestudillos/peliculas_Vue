@@ -1,7 +1,7 @@
 <template>
-  <div class="alert alert-warning text-center mt-3">
+  <div class="container alert alert-warning text-center mt-3">
     <h4 class="alert-heading">No hay registros</h4>
-    <p><i class="fa fa-exclamation fa-2x"></i></p>
+    <p><font-awesome-icon class="fa-2x" icon="exclamation"/></p>
   </div>
 </template>
 

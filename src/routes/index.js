@@ -2,7 +2,7 @@ import Vue from 'vue';
 // Rutas
 import VueRouter from 'vue-router';
 // Componentes
-import HomeComponent from '../components/home/HomeComponent.vue';
+import HomeComponent from '../components/home/Homecomponent.vue';
 import BuscarComponent from '../components/buscar/BuscarComponent.vue';
 import PeliculaComponent from '../components/pelicula/PeliculaComponent.vue';
 import ErrorComponent from '../components/shared/error/ErrorComponent.vue';
@@ -18,7 +18,7 @@ const routes = [
     {path: '/buscar', component: BuscarComponent},
     {path: '/buscar/:texto', component: BuscarComponent},
     {path: '/pelicula/:id/:pag', name: 'pelicula', component: PeliculaComponent},
-    {path: '/pelicula/:id/:pag/:busqueda', name: 'pelicula', component: PeliculaComponent},
+    {path: '/pelicula/:id/:pag/:busqueda', component: PeliculaComponent},
     {path: '*', component: ErrorComponent }
 ];
 

@@ -17,6 +17,6 @@ export default {
   name: 'HomeComponent',
   components: {
     GaleriaComponent
-  }
+  }  
 }
 </script>
